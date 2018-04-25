@@ -1,0 +1,43 @@
+/* one suggested mix of styles */
+
+.box1 {
+
+}
+
+.box2 {
+    display:inline-block;
+}
+
+.box3 {
+    
+}
+
+.box4 {
+    display : inline-block;
+}
+
+.box5 {
+    display : inline;
+}
+
+.box6 {
+    float : right;
+}
+
+.box7 {
+    display : block;
+}
+
+.box8 {
+    display : none;
+}
+
+.box9 {
+    position : absolute;
+}
+
+.box10 {
+    position : fixed;
+    top : 50px;
+    right : 50px;
+}

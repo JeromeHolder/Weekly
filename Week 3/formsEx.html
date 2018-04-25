@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://formsubmission.herokuapp.com/processform" method="GET">
+        <p><input type="text" name="user" placeholder="username"></p>
+        <p><textarea name="bio" id="bio" cols="30" rows="10"></textarea></p>
+        <p>Agree<input type="checkbox" name="agree"></p>
+
+        <select name="city" id="city">
+            <option value="Toronto">Toronto</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Calgary">Calgary</option>
+        </select>
+
+        <p>Male<input type="radio" name="gender" value="male"></p>
+        <p>Female<input type="radio" name="gender" value="female"></p>
+
+        <button type="submit"></button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <%= username %> </h1>
+    <p> <%= shoppingPhilosophy %> </p>
+
+    <% if(spendingLimit > 900) { %>
+        <p>Message here</p>
+    <% } else { %>
+        <p>Alternative message</p>
+    <% } %>
+    <% if(role === 'admin') { %>
+        <p>You're an admin</p>
+    <% } else { %>
+        <p>How are you?</p>
+    <% } %>
+    <!-- <p> <%=/* media.image */%> </p>
+    <img src="<%=/* media.image */%>" alt="" height="30%" width="30%" /> -->
+</body>
+</html>

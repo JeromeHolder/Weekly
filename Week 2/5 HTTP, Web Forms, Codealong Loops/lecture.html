@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Sample Form</h1>
+
+    <form action="http://aslkjdfhaslkdjfhafd.com" method="GET">
+
+        <!-- placeholder is the default text that disappears as soon as you type -->
+        <input type="text" name="username" placeholder="Type your username">
+        <!-- password type blocks out whatever is typed in -->
+        <input type="password" name="password" placeholder="Type your password"> 
+
+        <input type="email" name="user_email" placeholder="Type your email">
+
+        <input type="date" name="date">
+
+        <p>I prefer Dogs<input type="radio" value="dogs" name="petpref"> Cats<input type="radio" value="cats" name="petpref"></p>
+        <!-- <input type="radio" value="dogs" name="petpref">
+        <input type="radio" value="cats" name="petpref"> -->
+
+        <select name="time_preference">
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+        </select>
+
+        <!-- Used to pass data that is not related to the user -->
+        <!-- e.g. the product a user is buying (they are already on the page so they know, but the server needs to know) -->
+        <input type="hidden" name="Country" value="Canada">
+
+        <button type="submit">Send to server</button>
+
+    </form>
+
+</body>
+</html>

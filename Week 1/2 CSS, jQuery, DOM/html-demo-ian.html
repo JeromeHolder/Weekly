@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summer Diary</title>
+
+    <style>
+        .vibrant{
+            color: aqua;
+            background-color: darkslateblue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myheading">Ians Summer Diary</h1 >
+    <p class="pStyles otherClass"> eat froyo errday, etc, etc.</p>
+    <p class="pStyles"> other journal entry</p>
+    <a href="http://wikipedia.org" > wikipedia </a>
+    <button id="theButton">Click Me</button>
+
+    <input type="text" id="myInput" />
+
+    <script>
+        // go and get the DOM node for the element with id 'myheading'
+        // var domNode = document.getElementById('myheading');
+        // domNode.innerText = "Hi Class";
+        // console.log(domNode);
+
+        var pTags = document.getElementsByTagName('p');
+        console.log(pTags);
+
+        var otherClassNodes = document.getElementsByClassName('otherClass');
+        console.log(otherClassNodes);
+
+        
+    </script>
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        // in this script tag, we are using jQuery, so this MUST be below the jQuery script tag
+
+        $(function(){
+
+        // with jQuery there are always 2 main steps
+            // 1. ask the browser to give you elements that match a selector (i.e. $(''))
+
+        // go and get all the dom nodes for h1, and put it in 'header'
+        var header = $('h1');
+        // console.log(header);
+            // 2. once you have the content from your query, do something with it
+        header.text('this is the new text');
+
+        var headerText = $('#myheading').text();
+        console.log(headerText);
+        
+        // we can use jQuery to set one css property:
+        $('a').css('background-color', 'pink');
+
+        // we can also use jQuery to set multiple css properties:
+        $('.pStyles').css({
+            'font-family': 'Arial',
+            'color': 'blue',
+            'text-decoration': 'underline'
+        });
+
+        $('p').addClass('vibrant');
+
+        // we can use jQuery to set up code to run when an event happens
+        // this is called setting up an event listener
+        // in the code below we are going to set up an event listener that listens for a button click
+        $('#theButton').click(function(){
+            // whatever code is written here will run when the event happens
+            console.log('the button was clicked');
+            $('body').css('background-color', 'green');
+        });
+        $('#myheading').hover(function(){
+            $('#myheading').css('font-size', '50px');
+        });
+        
+        // Below uses jQuery to select the whole document
+        // note that there are no quotes around document
+        $(document).keydown(function(){
+            $('p').animate({'marginLeft': '+=300px'}, 2000);
+            // here's how we can get the value of a text input using jQuery
+            // you selevt the input and then use .val() to get the value
+            var textContent = $('#myInput').val();
+            console.log(textContent);
+        });
+
+
+
+        });
+    </script>
+</body>
+</html>

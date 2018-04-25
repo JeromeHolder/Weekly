@@ -1,0 +1,9 @@
+.wrapper {
+    margin: 15px auto;
+}
+span {
+    display: block;
+}
+.red{
+    color: red;
+}

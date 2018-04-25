@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <link rel ="stylesheet" type ="text/css" href ="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-12">
+          <h1>A Photo Grid</h1>
+          <h5>A beautiful responsive grid with our favourite photos</h5>
+        </div>
+      <!-- div.col-12*12>span+img -->
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>The band</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/band.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>City</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/city.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Young Love</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/couple.jpg" alt="
+          "></div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Deer</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/deer.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Stampy</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/elephant.jpeg" al
+          t=""></div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Fox</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/fox.jpeg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Moon</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/moon.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Moutain</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/mountain-sky.jpeg
+          " alt=""></div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Park</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/national-park.jpeg" 
+          alt=""></div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Ocean</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/ocean-cave.jpg" a
+          lt=""></div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Pancakes</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/pancakes.gif" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 wrapper">
+          <span>Sunset</span>
+          <button class='like-btn'><i class="far fa-heart"></i></button>
+          <img class='img-fluid' src="./img/sunset.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('.like-btn').click(like);
+        function like(){
+          if($(this).hasClass('red')){
+            $(this).removeClass('red')
+          } else {
+            $(this).addClass('red')
+          }
+        }
+      })
+    </script>
+</body>
+</html>

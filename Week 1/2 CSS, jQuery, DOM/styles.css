@@ -1,0 +1,14 @@
+h1 {
+    color:blueviolet;
+    background-color: bisque;
+    font-style: italic; 
+}
+.funnyFont, li {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+}
+#basicImage {
+    width:200px;
+    height:250px;
+    border: blue solid 1px;
+}

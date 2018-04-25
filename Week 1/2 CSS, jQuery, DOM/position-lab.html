@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .outer {
+        background-color: gray;
+        height: 400px;
+        width: 400px;
+        position: relative; /*Not in step 1*/
+    }
+    .inner {
+        background-color: black;
+        color: white;
+        height: 200px;
+        width: 200px;
+        /*position: relative;*/ /*step 1*/
+        /* position: absolute;  */
+        position: fixed; /*step 4*/
+        top: 100px;
+        left: 300px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="outer">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, voluptatem? Aliquam, quae libero enim fugiat quod numquam voluptates fuga. Ratione libero quaerat necessitatibus repudiandae quasi distinctio itaque sequi est maxime?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quia facilis, necessitatibus, blanditiis aut repellat commodi vel dicta rem soluta natus placeat aliquam nostrum! Harum recusandae eos possimus voluptates rem?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore error mollitia, qui accusamus eligendi nisi officiis ea itaque ratione excepturi quod provident temporibus ipsum nobis maiores? Nemo, eveniet consectetur. Ex.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente vel amet, dolor consequatur reprehenderit, et possimus odit repellendus voluptates explicabo earum quaerat. Labore veritatis sed, ex neque amet nemo quos.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error facilis, nulla aliquid a aperiam eius iusto! Minima cum reprehenderit error ex corporis architecto harum rerum animi illo quas, reiciendis exercitationem!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur debitis laudantium adipisci quos explicabo sequi est quaerat, odio labore illum repellendus nobis maxime dolores excepturi, voluptatem, sint culpa doloribus? Corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quasi quaerat nisi aliquam maxime et consequuntur reprehenderit odit. Facilis totam officia cum velit incidunt? Nisi quas officiis tempore impedit. Eum?
+        
+        <div class="inner">
+            Inner
+        </div>
+    </div>
+</body>
+</html>

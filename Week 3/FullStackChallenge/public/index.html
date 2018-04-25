@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fishFindr</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Fish Data Below</h1>
+    <p id="fish"></p>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        function formatFish(data) {
+            return `<article>
+                <ul> 
+                    <li>${data.name}</li>
+                    <li>${data.type}</li>
+                    <li>${data.water}</li>
+                    <li>${data.predator}</li>
+                </ul>
+                </article>`;
+        }
+        $(document).ready(function(e){
+            $.get("/fish", (data) => {
+                data.forEach((fishentry) => {$("#fish").append(formatFish(fishentry));})
+            })
+        })
+    </script>
+</body>
+</html>
