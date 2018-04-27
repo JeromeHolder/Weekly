@@ -1,0 +1,16 @@
+$headline-color: grey;
+$content-color: darkblue;
+
+.container{
+    margin-left: 2rem;
+    h3{
+        color: $headline-color;
+    }
+}
+
+.main{
+    @extend .container;
+    p{
+        color: $content-color;
+    }
+}

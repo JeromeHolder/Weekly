@@ -1,0 +1,7 @@
+.container, .main {
+  margin-left: 2rem; }
+  .container h3, .main h3 {
+    color: grey; }
+
+.main p {
+  color: darkblue; }

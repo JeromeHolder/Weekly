@@ -1,0 +1,26 @@
+$brand-color: yellow;
+$brand-color-two: green;
+
+body {
+    background-color: $brand-color;
+}
+
+.top {
+    border: solid thick $brand-color-two;
+    h1{
+        text-align: center;
+        color: $brand-color-two;
+    }
+}
+
+.content{
+    font-size: 2.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $brand-color-two;
+}
+
+.special-content{
+    @extend .content;
+    color: fuchsia;
+    font-size: 2.5rem;
+}
