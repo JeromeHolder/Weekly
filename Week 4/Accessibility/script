@@ -1,0 +1,13 @@
+$(function () {
+    $('#submit').on('click', function () {
+        $('#server-errors').text('uh oh username taken');
+    })
+
+    $('#year').on('input', function () {
+        if (isNaN($(this).val())) {
+            $('#year-errors').text('must be a number');
+        } else {
+            $('#year-errors').text('');
+        }
+    })
+})

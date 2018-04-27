@@ -1,0 +1,13 @@
+.nav .nav-item,
+.nav .dropdown-item {
+    background-color: black;
+    color: navy;
+}
+
+span.btn {
+    border: 2px solid black;
+}
+
+.thead-default * {
+    background-color: #eceeef;
+}
