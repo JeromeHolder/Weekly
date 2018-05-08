@@ -1,0 +1,112 @@
+body{
+  background: linear-gradient(to right, rgb(253,201,254)0%, rgb(254,222,245) 100%);
+  box-sizing: border-box;
+}
+.App {
+  padding: 5vh;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.row { 
+  margin-bottom: 0;
+}
+.question-container {
+  position: relative;
+  height: 57.5vh;
+  background-color: white;
+  border-radius: 2em;
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.4); 
+  -moz-box-shadow:    2px 2px 10px 0px rgba(0,0,0,0.4); 
+  box-shadow:         2px 2px 10px 0px rgba(0,0,0,0.4);
+  text-align: center;
+  overflow: scroll;
+  margin-bottom: 2.5vh; 
+}
+.question-header {
+  width: 60%;
+  padding-bottom: 1em; 
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+.question-content {
+  position: relative;
+  margin: auto;
+  font-size: 1.25rem;
+  font-weight: 550;
+  height: 45%;
+}
+.question-content p {
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+.navigate {
+  position: relative;
+  height: 27.5vh;
+  background-color: white;
+  border-radius: 2em;
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.4); 
+  -moz-box-shadow:    2px 2px 10px 0px rgba(0,0,0,0.4); 
+  box-shadow:         2px 2px 10px 0px rgba(0,0,0,0.4);
+  text-align: center;
+  overflow: scroll;
+  /* margin-bottom: 2.5vh;  */
+}
+.btn-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+}
+.btn-container button {
+  margin: 2vh;
+  width: 6em;
+  /* font-size: 0.5em; */
+}
+.choice-container {
+  height: 90vh;
+  text-align: center;
+}
+.choice-outer {
+  height: calc(90vh / 3);
+  padding-bottom: 2.5vh;
+}
+.choice {
+  position: relative;
+  border-radius: 2em;
+  margin-left: 5vh;
+  background-color: white;
+  height: 100%;
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.4); 
+  -moz-box-shadow:    2px 2px 10px 0px rgba(0,0,0,0.4); 
+  box-shadow:         2px 2px 10px 0px rgba(0,0,0,0.4);
+}
+.choice p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  font-size: 1.25rem;
+  font-weight: 550;
+}
+.choice:hover {
+  background-color: #FDCF9E;
+}
+@media (max-width: 992px){
+  .question-container {
+    height: 50vh;
+  }
+  .choice-container {
+    margin-top: 2.5vh;
+  }
+  .choice {
+    margin-left: 0; 
+  }
+}
