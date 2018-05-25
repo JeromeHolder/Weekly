@@ -29,26 +29,66 @@ const bookshelf = require('bookshelf')(knex);
     // This model is capitalized because we use it like a constructor
     // This model will be our interface to the authors table from this moment forward
 const Author = bookshelf.Model.extend({
-    tableName: 'authors'
+    tableName: 'authors',
+
+    books: function(){
+        return this.hasMany(Book) //Each author has many books
+    }
 });
 
+const Book = bookshelf.Model.extend({
+    tableName: 'books',
 
-app.post('/authors', (req, res)=>{
-    let newAuthor = req.body;
-    // To create a new row in our table:
-    // 1. Call model like a constructor to get one instance
-    // Pass the model all the data for your new row
-    let newWriter = new Author(newAuthor);
-
-    newWriter.save()
-        .then(savedAuthor =>{
-            // console.log(savedAuthor.attributes);
-            res.json(savedAuthor.attributes);
-        })
-        .catch(error => {
-            console.log(error);
-        });
+    author: function(){
+        return this.belongsTo(Author) //Each book has one author
+    }
 });
+
+// Let's create a book written by one of the authors in the authors db
+    // 1. Use model like a constructor to create an instance of that model
+// let newBook = new Book({
+//     title: "Foundation and Empire",
+//     author_id: 1
+// });
+
+// 2. call .save() on that instance which actually saves it to the db
+// newBook.save()
+//        .then(savedBook => {
+//            console.log(savedBook);
+//        })
+//        .catch(err => {
+//            console.log(err);
+//        });
+
+
+// HERE IS THE POWER OF ORM'S
+    // 1. we tell it all the relationships between tables
+    // 2. we can ask it to do things with relations, because it understands
+Author.where({id:1})
+      .fetch({withRelated: 'books'})
+      .then(results => {
+          console.log(results.attributes, results.relations.books.models);
+      })
+      .catch(err => {
+          console.log(err);
+      });
+
+// app.post('/authors', (req, res)=>{
+//     let newAuthor = req.body;
+//     // To create a new row in our table:
+//     // 1. Call model like a constructor to get one instance
+//     // Pass the model all the data for your new row
+//     let newWriter = new Author(newAuthor);
+
+//     newWriter.save()
+//         .then(savedAuthor =>{
+//             // console.log(savedAuthor.attributes);
+//             res.json(savedAuthor.attributes);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// });
 
 
 // Retrieve author with id # I.E. Reading back a row
@@ -64,16 +104,16 @@ app.post('/authors', (req, res)=>{
 
 
 // This code shows how to grab many rows in conjunction with express
-app.get('/authors', (req, res)=>{
-    Author.where({})
-          .fetchAll()
-          .then(results => {
-              res.json(results);
-          })
-          .catch(err => {
-              console.log(err);
-          });
-});
+// app.get('/authors', (req, res)=>{
+//     Author.where({})
+//           .fetchAll()
+//           .then(results => {
+//               res.json(results);
+//           })
+//           .catch(err => {
+//               console.log(err);
+//           });
+// });
 
 
 // Author.where({}) //Empty object says give me everything
@@ -107,6 +147,7 @@ app.get('/authors', (req, res)=>{
 //     .catch(err => {
 //         console.log(err);
 //     });
+
 
 
 app.listen(8080, ()=>{console.log("Server running on 8080")});
